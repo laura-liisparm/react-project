@@ -1,26 +1,26 @@
 import "./App.css";
-import ExpenseDate from "./ExpenseDate";
-import ExpenseItem from "./ExpenseItem";
+import Expenses from "./Expenses";
 
 function App() {
   const expenses = [
     {
+      id: "e1",
       title: "Car Insurance",
       price: 294.67,
       date: new Date(2024, 5, 28),
     },
     {
-      title: "New Desk (Wooden)",
-      price: 450,
-      date: new Date(2024, 2, 12),
+      id: "e2",
+      title: "New Laptop",
+      price: 1200,
+      date: new Date(2024, 7, 12),
     },
   ];
 
   return (
-    <>
-      <ExpenseItem expenseData={expenses[0]} />
-      <ExpenseItem expenseData={expenses[1]} />
-    </>
+    <div>
+      <Expenses expenses={expenses} />
+    </div>
   );
 }
 
