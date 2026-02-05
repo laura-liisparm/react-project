@@ -1,6 +1,6 @@
 import "./ExpenseItem.css";
-import ExpenseDate from "./ExpenseDate";
-import Card from "../../UI/Card";
+import ExpenseDate from "./ExpenseDate.jsx";
+import Card from "../../../UI/Card.jsx";
 import { useState } from "react";
 
 function ExpenseItem(props) {
@@ -11,8 +11,6 @@ function ExpenseItem(props) {
     setTitle(`Updated by click ${title}`);
     console.log(title);
   };
-
-  console.log(title);
 
   return (
     <Card className="expense-item">
