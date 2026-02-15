@@ -17,12 +17,10 @@ function ExpenseItem(props) {
       <li>
           <Card className="expense-item">
               <ExpenseDate date={props.expenseData.date} />
-              <div className="expense-item_description">
+              <div className="expense-item__description">
                   <h2>{props.expenseData.title}</h2>
-                  <div className="expense-item_price">{props.expenseData.price}</div>
+                  <div className="expense-item__price">{props.expenseData.price}</div>
               </div>
-
-              <button onClick={clickHandler}>Click me</button>
           </Card>
       </li>
     )
