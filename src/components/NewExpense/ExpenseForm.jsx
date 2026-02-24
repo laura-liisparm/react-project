@@ -23,9 +23,9 @@ function ExpenseForm(props) {
         event.preventDefault();
 
         if (
-            enteredTitle.trim().length == 0 ||
-            enteredPrice.trim().length == 0 ||
-            enteredDate.trim().length == 0
+            enteredTitle.trim().length === 0 ||
+            enteredPrice.trim().length === 0 ||
+            enteredDate.trim().length === 0
         ) {
             setError({
                 title: "Invalid Input",
@@ -82,15 +82,15 @@ function ExpenseForm(props) {
                             <input
                                 id="date"
                                 type="date"
-                                min={2024 - 11 - 12}
-                                max={2027 - 1 - 31}
+                                min="2024-11-12"
+                                max="2027-01-31"
                                 ref={dateInputRef}
                             />
                         </div>
                     </div>
                     <div className="new-expense__actions">
                         <button type="submit">Add Expense</button>
-                        <button onClick={FormEditHandler} id="cancel">
+                        <button type="button" onClick={FormEditHandler} id="cancel">
                             Cancel
                         </button>
                     </div>
